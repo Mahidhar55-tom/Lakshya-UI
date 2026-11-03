@@ -3,9 +3,11 @@ export const company = {
   shortName: 'Lakshya',
   description:
     'Lakshya Software Technologies is a technology-focused company delivering customized digital and enterprise solutions. Its focus includes software development, engineering, technology consulting, implementation, application support, testing, maintenance, and talent acquisition.',
-  email: 'info@lakshya-soft.com',
-  phone: '+91 00000 00000',
-  address: 'Hyderabad, India',
+  email: 'contact@lakshya-soft.com',
+  phone: '+91 81432 33244',
+  address: 'RENT A DESK – Mind Space, Plot #37 & 38, Serinity Square, Madhapur, Hyderabad, Telangana 500081',
+  directionsUrl: 'https://maps.app.goo.gl/HRKtQG2ZDugDw7hb6',
+  mapEmbedUrl: 'https://www.google.com/maps?q=17.4416029,78.3825443&z=16&output=embed',
   announcement: 'Technology innovation for resilient digital growth.',
 };
 
