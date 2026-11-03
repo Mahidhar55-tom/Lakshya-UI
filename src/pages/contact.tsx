@@ -35,9 +35,15 @@ export default function ContactPage() {
             <div className="text-xs uppercase tracking-[0.2em] text-blue-300">Contact</div>
             <h1 className="mt-4 font-display text-5xl font-semibold tracking-[-0.06em] text-white">Tell us about your project.</h1>
             <div className="mt-8 space-y-4 text-slate-300">
-              <p><span className="font-medium text-white">Email:</span> {company.email}</p>
-              <p><span className="font-medium text-white">Phone:</span> {company.phone}</p>
-              <p><span className="font-medium text-white">Address:</span> {company.address}</p>
+              <p><span className="font-medium text-white">Email:</span> <a className="transition-colors hover:text-blue-300" href={`mailto:${company.email}`}>{company.email}</a></p>
+              <p><span className="font-medium text-white">Phone:</span> <a className="transition-colors hover:text-blue-300" href={`tel:${company.phone.replace(/[^\d+]/g, '')}`}>{company.phone}</a></p>
+              <div>
+                <p><span className="font-medium text-white">Find us:</span></p>
+                <p className="mt-1 max-w-lg">{company.address}</p>
+                <a className="mt-3 inline-flex items-center gap-2 font-medium text-blue-300 transition-colors hover:text-blue-200" href={company.directionsUrl} target="_blank" rel="noreferrer">
+                  Get directions <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -69,6 +75,24 @@ export default function ContactPage() {
               {status === 'error' && <span className="text-sm text-red-300">Please provide your name and email.</span>}
             </div>
           </form>
+        </div>
+        <div className="mt-12 overflow-hidden rounded-[28px] border border-white/10 bg-white/5">
+          <iframe
+            title="Map showing RENT A DESK – Mind Space in Madhapur, Hyderabad"
+            src={company.mapEmbedUrl}
+            className="h-[320px] w-full border-0 sm:h-[400px]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <div>
+              <h2 className="font-display text-xl font-semibold text-white">Visit our Hyderabad office</h2>
+              <p className="mt-1 text-sm text-slate-400">{company.address}</p>
+            </div>
+            <a className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500" href={company.directionsUrl} target="_blank" rel="noreferrer">
+              Get directions <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
     </PageShell>

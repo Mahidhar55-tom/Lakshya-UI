@@ -9,6 +9,14 @@ const points = [
   'Quality-oriented implementation, support, and long-term business continuity.',
 ];
 
+const companyMetrics = [
+  { value: '9+', label: 'Years of field experience' },
+  { value: '350+', label: 'Projects done around the world' },
+  { value: '99%', label: 'Client satisfaction' },
+  { value: '2015', label: 'Year established' },
+  { value: '2 mins', label: 'Response time' },
+];
+
 export default function AboutPage() {
   return (
     <PageShell title="About Us | Lakshya Software Technologies" description="Learn about Lakshya Software Technologies, its business focus, and its technology-driven delivery approach.">
@@ -63,6 +71,25 @@ export default function AboutPage() {
                 <p className="mt-2 text-sm text-slate-300">Reliability, consistency, and customer confidence.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-[radial-gradient(ellipse_at_top,_rgba(37,99,235,0.16),transparent_65%),linear-gradient(180deg,#0b1220,#080c14)] py-16 sm:py-20">
+        <div className="mx-auto max-w-container px-4 lg:px-8">
+          <div className="mb-9 max-w-2xl">
+            <div className="text-xs uppercase tracking-[0.2em] text-blue-300">Our impact</div>
+            <h2 className="mt-3 font-display text-4xl font-semibold tracking-[-0.05em] text-white">Experience you can measure.</h2>
+            <p className="mt-3 text-slate-400">A track record built through dependable delivery and lasting client relationships.</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {companyMetrics.map(({ value, label }) => (
+              <article key={label} className="group rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-[0_12px_40px_rgba(2,8,23,0.18)] transition duration-200 hover:-translate-y-1 hover:border-blue-400/40 hover:shadow-[0_18px_48px_rgba(37,99,235,0.12)]">
+                <div className="h-1 w-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-300 transition-all group-hover:w-16" />
+                <div className="mt-6 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">{value}</div>
+                <p className="mt-3 min-h-12 text-sm leading-relaxed text-slate-400">{label}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
