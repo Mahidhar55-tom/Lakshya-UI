@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="wall" x1="120" y1="0" x2="1390" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152943"/>
+      <stop offset=".55" stop-color="#315B83"/>
+      <stop offset="1" stop-color="#193B6E"/>
+    </linearGradient>
+    <linearGradient id="desk" x1="220" y1="525" x2="1380" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AFC5D2"/>
+      <stop offset=".52" stop-color="#718DA7"/>
+      <stop offset="1" stop-color="#375C87"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="389" y1="570" x2="1053" y2="952" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1DE"/>
+      <stop offset="1" stop-color="#CBD6DE"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="674" y1="249" x2="1005" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D2E5EF"/>
+      <stop offset="1" stop-color="#7895B1"/>
+    </linearGradient>
+    <filter id="shadow" x="195" y="215" width="1283" height="866" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <path fill="url(#wall)" d="M0 0h1600v1000H0z"/>
+  <path fill="#C5D8E9" fill-opacity=".08" d="M1040 0h560v505h-560z"/>
+  <path fill="#E0B8C6" fill-opacity=".09" d="M0 0h350v555H0z"/>
+  <path fill="#C6D9E5" fill-opacity=".08" d="M365 0h355v530H365z"/>
+  <path fill="#122842" fill-opacity=".28" d="M0 525h1600v475H0z"/>
+  <path fill="url(#desk)" d="M0 566c330-38 672 40 968-17 248-48 441-46 632-13v464H0V566Z"/>
+  <ellipse cx="872" cy="830" fill="#122844" fill-opacity=".26" rx="590" ry="104" filter="url(#shadow)"/>
+  <path fill="#1D3957" d="m772 200 319 29 38 448-353-15-4-462Z"/>
+  <path fill="url(#screen)" d="m790 221 278 26 30 380-312-12 4-394Z"/>
+  <path fill="#F2F5EF" fill-opacity=".7" d="m827 286 195 19 2 10-196-18zm-1 35 218 20 1 9-219-18zm-2 34 174 15 1 9-175-14zm-1 35 203 17 1 9-204-16z"/>
+  <path fill="#8CCDC6" fill-opacity=".62" d="m828 457 185 14 2 55-186-13z"/>
+  <path fill="#53718A" d="m757 611 374 16 77 57-496-28 45-45Z"/>
+  <path fill="#DAE3E4" d="m287 595 601 69 225 270-713-67-113-272Z"/>
+  <path fill="url(#paper)" d="m303 607 566 65 200 238-665-62-101-241Z"/>
+  <path fill="#7B8FA2" fill-opacity=".7" d="m355 664 392 43 4 9-392-42zm17 29 397 42 4 9-397-42zm16 31 405 42 4 8-405-42zm18 31 402 40 4 9-402-40zm13 31 425 40 4 8-425-40zm17 30 418 39 5 9-418-39z"/>
+  <path stroke="#607D98" stroke-opacity=".55" stroke-width="4" d="m876 672 31 226"/>
+  <path fill="#E8EDF0" d="m1248 650 22-115 18 2-17 119-23-6Z"/>
+  <path fill="#45B8D7" d="m1261 538 10-47 13 2-8 47-15-2Z"/>
+  <path fill="#233C54" fill-opacity=".62" d="M0 0h1600v1000H0z"/>
+</svg>
