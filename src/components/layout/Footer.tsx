@@ -44,12 +44,17 @@ export function Footer() {
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
-        <div>
+        <div className="lg:col-span-2">
           <h3 className="font-medium text-white">Contact</h3>
-          <ul className="mt-4 space-y-2 text-sm text-slate-400">
-            <li><a href={`mailto:${company.email}`}>{company.email}</a></li>
-            <li><a href={`tel:${company.phone.replace(/\s+/g, '')}`}>{company.phone}</a></li>
-            <li>{company.address}</li>
+          <ul className="mt-4 space-y-3 text-sm text-slate-400">
+            <li><a className="transition-colors hover:text-blue-300" href={`mailto:${company.email}`}>{company.email}</a></li>
+            <li><a className="transition-colors hover:text-blue-300" href={`tel:${company.phone.replace(/[^\d+]/g, '')}`}>{company.phone}</a></li>
+            <li className="max-w-sm leading-relaxed">{company.address}</li>
+            <li>
+              <a className="inline-flex items-center gap-2 font-medium text-blue-300 transition-colors hover:text-blue-200" href={company.directionsUrl} target="_blank" rel="noreferrer">
+                Get directions <span aria-hidden="true">↗</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
